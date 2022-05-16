@@ -1,0 +1,30 @@
+<template>
+  <div class="wrapper">
+    <my-form onupdatecontent={onUpdateForm}></my-form>
+    <template if:true={hasContents}>
+      <my-preview contents={contents}></my-preview>
+    </template>
+    <div class="bottom-nav">
+      <template if:true={hasContents}>
+        <button
+          type="button"
+          onclick={onButtonClick}
+          class="slds-button slds-button_brand"
+        >
+          Create
+        </button>
+      </template>
+      <template if:false={hasContents}>
+        <span>Set the component name first.</span>
+        <button
+          type="button"
+          disabled="disabled"
+          class="slds-button slds-button_brand"
+        >
+          Create
+        </button>
+      </template>
+    </div>
+    <my-footer></my-footer>
+  </div>
+</template>

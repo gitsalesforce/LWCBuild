@@ -1,0 +1,13 @@
+# Standard src folder
+/src
+
+# Tooling files
+node_modules
+.eslintignore
+.eslintrc.json
+.prettierignore
+.prettierrc
+lwc.config.json
+
+# MacOS system files
+.DS_Store
